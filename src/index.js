@@ -6,7 +6,7 @@ const cors = require("cors");
 require("dotenv").config();
 const app = express();
 const PORT = 3000;
-const IP_ADDRESS = "localhost";
+// const IP_ADDRESS = "localhost";
 const path = require("path");
 
 const corsOptions = {
@@ -46,6 +46,6 @@ cloudinary.config({
   api_secret: process.env.API_SECRET,
 });
 
-app.listen(PORT, IP_ADDRESS, () => {
-  console.log(`Server is running on http://${IP_ADDRESS}:${PORT}`);
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
